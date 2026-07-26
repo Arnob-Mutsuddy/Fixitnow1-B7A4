@@ -3,6 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import notFound from "./middleware/notFound";
 import { globalErrorHandler } from "./middleware/globalErrorHandler";
+import { authRoutes } from "./module/auth/auth.route";
 
 const app: Application = express();
 
@@ -20,8 +21,8 @@ app.get("/", (req: Request, res: Response) => {
   });
 });
 
-// Routes will be mounted here later
-// app.use("/api", router);
+app.use("/api/auth", authRoutes);
+
 
 app.use(notFound);
 app.use(globalErrorHandler);
