@@ -5,6 +5,7 @@ import notFound from "./middleware/notFound";
 import { globalErrorHandler } from "./middleware/globalErrorHandler";
 import { authRoutes } from "./module/auth/auth.route";
 
+
 const app: Application = express();
 
 // Middlewares
@@ -22,6 +23,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.use("/api/auth", authRoutes);
+
 
 
 app.use(notFound);

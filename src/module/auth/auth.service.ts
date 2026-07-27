@@ -55,17 +55,15 @@ const loginUser = async (payload: ILoginPayload) => {
   if (!isPasswordValid) {
     throw new AppError(httpStatus.UNAUTHORIZED, "Invalid email or password");
   }
+  
+  const jwtPayload = { id: user.id, email: user.email, name: user.name, role: user.role };
 
-  const jwtPayload = { userId: user.id, role: user.role };
-
-  const accessToken = jwtUtils.createToken(
-    jwtPayload,
+  const accessToken = jwtUtils.createToken(jwtPayload,
     config.jwt_access_secret,
     config.jwt_access_expires_in as SignOptions
   );
 
-  const refreshToken = jwtUtils.createToken(
-    jwtPayload,
+  const refreshToken = jwtUtils.createToken(jwtPayload,
     config.jwt_refresh_secret,
     config.jwt_refresh_expires_in as SignOptions
   );

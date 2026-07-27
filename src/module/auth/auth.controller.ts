@@ -5,6 +5,7 @@ import { authValidation } from "./auth.validation.js";
 import { authService } from "./auth.service.js";
 import sendResponse from "../../utils/sendResponse.js";
 import config from "../../config/index.js";
+import { prisma } from "../../lib/prisma.js";
 
 const register = catchAsync(async (req, res) => {
   authValidation.vRegisterInput(req.body);
@@ -37,11 +38,27 @@ const login = catchAsync(async (req, res) => {
     data: {
       accessToken: result.accessToken,
       user: result.user,
+      
     },
+  });
+});
+
+const getMe = catchAsync(async (req, res) => {
+  const user = await prisma.user.findUnique({
+    where: { id: req.user!.id },
+    select: { id: true, name: true, email: true, role: true, status: true, createdAt: true },
+  });
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "User retrieved successfully",
+    data: user,
   });
 });
 
 export const authController = {
   register,
   login,
+  getMe
 };
