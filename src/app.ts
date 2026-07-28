@@ -6,6 +6,7 @@ import { globalErrorHandler } from "./middleware/globalErrorHandler";
 import { authRoutes } from "./module/auth/auth.route";
 import { categoryRoutes } from "./module/category/category.route";
 import { technicianRoutes } from "./module/technician/technician.route";
+import { serviceRoutes } from "./module/service/service.route";
 
 const app: Application = express();
 
@@ -28,6 +29,7 @@ app.use("/api/categories", categoryRoutes);
 
 
 app.use("/api/technicians", technicianRoutes);
+app.use("/api/services", serviceRoutes);
 app.use(notFound);
 app.use(globalErrorHandler);
 // 404 handler
