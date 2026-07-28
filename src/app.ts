@@ -5,10 +5,10 @@ import notFound from "./middleware/notFound";
 import { globalErrorHandler } from "./middleware/globalErrorHandler";
 import { authRoutes } from "./module/auth/auth.route";
 import { categoryRoutes } from "./module/category/category.route";
+import { technicianRoutes } from "./module/technician/technician.route";
 
 const app: Application = express();
 
-// Middlewares
 app.use(cors({ origin: true, credentials: true }));
 app.use(cookieParser());
 app.use(express.json());
@@ -26,6 +26,8 @@ app.use("/api/auth", authRoutes);
 
 app.use("/api/categories", categoryRoutes);
 
+
+app.use("/api/technicians", technicianRoutes);
 app.use(notFound);
 app.use(globalErrorHandler);
 // 404 handler
