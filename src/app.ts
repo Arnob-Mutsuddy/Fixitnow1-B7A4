@@ -10,6 +10,7 @@ import { serviceRoutes } from "./module/service/service.route";
 import { bookingRoutes } from "./module/booking/booking.route";
 import { paymentController } from "./module/payment/payment.controller";
 import { paymentRoutes } from "./module/payment/payment.route";
+import { reviewRoutes } from "./module/review/review.route";
 
 const app: Application = express();
 
@@ -41,6 +42,8 @@ app.use("/api/technicians", technicianRoutes);
 app.use("/api/services", serviceRoutes);
 app.use("/api/bookings", bookingRoutes);
 app.use("/api/payments", paymentRoutes);
+app.use("/api/reviews", reviewRoutes);
+
 
 //just to understand stripe redirect cause if i not do this it shows this 
 // {
