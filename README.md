@@ -22,8 +22,8 @@ npm run dev
 
 ## Admin Credentials
 
-- Email: [EMAIL_ADDRESS]
-- Password: [PASSWORD]
+- Email: admin@test.com
+- Password: admin1234
 
 ## API Documentation
 
