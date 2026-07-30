@@ -4292,7 +4292,7 @@
   "variable": [
     {
       "key": "base_url",
-      "value": "http://localhost:5000"
+      "value": "https://fixitnow-lake.vercel.app"
     },
     {
       "key": "customer_token",
