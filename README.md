@@ -27,12 +27,10 @@ npm run dev
 
 ## API Documentation
 
-Postman Docs: [<your-published-postman-link>](https://documenter.getpostman.com/view/54724313/2sBY4SNz8b)
+Postman Docs: [POSTMAN](https://documenter.getpostman.com/view/54724313/2sBY4SNzMs)
 
 ## Live API
-
-<your-deployed-url>
-
+[Link](https://fixitnow-lake.vercel.app)
 
 ## Roles
 
