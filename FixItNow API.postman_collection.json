@@ -1,0 +1,4334 @@
+{
+  "info": {
+    "_postman_id": "97041ab7-86b3-4bc8-972a-29b3eaedb214",
+    "name": "FixItNow API",
+    "description": "Complete API collection for FixItNow — Home Services Marketplace backend. Covers Auth, Categories, Technicians, Services, Bookings, Payments, Reviews, and Admin modules.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54724313",
+    "_collection_link": "https://go.postman.co/collection/54724313-97041ab7-86b3-4bc8-972a-29b3eaedb214?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register (Customer)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Cus2\",\n  \"email\": \"cus2@test.com\",\n  \"password\": \"123456\",\n  \"role\": \"CUSTOMER\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Register (Customer)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Cus2\",\n  \"email\": \"cus2@test.com\",\n  \"password\": \"123456\",\n  \"role\": \"CUSTOMER\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/auth/register",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "262"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"106-K8scdHbniUvnnFCHMOTt26TbUl0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:07:45 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"id\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n        \"name\": \"Cus2\",\n        \"email\": \"cus2@test.com\",\n        \"role\": \"CUSTOMER\",\n        \"status\": \"ACTIVE\",\n        \"createdAt\": \"2026-07-30T14:07:45.191Z\",\n        \"updatedAt\": \"2026-07-30T14:07:45.191Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Register (Technician)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Tech2\",\n  \"email\": \"tech2@test.com\",\n  \"password\": \"123456\",\n  \"role\": \"TECHNICIAN\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Register (Technician)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Tech2\",\n  \"email\": \"tech2@test.com\",\n  \"password\": \"123456\",\n  \"role\": \"TECHNICIAN\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/auth/register",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "register"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "266"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"10a-lyF3ws4bpZx3+sx48QtKqjsG/P4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:08:33 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"id\": \"1e393414-2111-4302-b7d3-ef57c052c62f\",\n        \"name\": \"Tech2\",\n        \"email\": \"tech2@test.com\",\n        \"role\": \"TECHNICIAN\",\n        \"status\": \"ACTIVE\",\n        \"createdAt\": \"2026-07-30T14:08:33.041Z\",\n        \"updatedAt\": \"2026-07-30T14:08:33.041Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Login (Customer)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"cus2@test.com\",\n  \"password\": \"123456\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Login (Customer)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"cus2@test.com\",\n  \"password\": \"123456\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/auth/login",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5MTc3NDZkLWU3ZTgtNGY2MC05MjJlLWJhY2IxYzdiYjg4MCIsImVtYWlsIjoiY3VzMkB0ZXN0LmNvbSIsIm5hbWUiOiJDdXMyIiwicm9sZSI6IkNVU1RPTUVSIiwiaWF0IjoxNzg1NDIwNTMyLCJleHAiOjE3ODY3MTY1MzJ9.iecyXGbhn0PRLy-rtsc3LjtZv6i7Opfrb0yBSn5KFts; Path=/; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "537"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"219-++Zh+SMRucwGxUQrxkNsfEV63B4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:08:52 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5MTc3NDZkLWU3ZTgtNGY2MC05MjJlLWJhY2IxYzdiYjg4MCIsImVtYWlsIjoiY3VzMkB0ZXN0LmNvbSIsIm5hbWUiOiJDdXMyIiwicm9sZSI6IkNVU1RPTUVSIiwiaWF0IjoxNzg1NDIwNTMyLCJleHAiOjE3ODU1MDY5MzJ9.f4M4eMm5csxB6WZgOU9TCMdHceFosB1fU66Y4fE5ywI\",\n        \"user\": {\n            \"id\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n            \"name\": \"Cus2\",\n            \"email\": \"cus2@test.com\",\n            \"role\": \"CUSTOMER\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-30T14:07:45.191Z\",\n            \"updatedAt\": \"2026-07-30T14:07:45.191Z\"\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Login (Technician)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"tech2@test.com\",\n  \"password\": \"123456\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Login (Technician)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"tech2@test.com\",\n  \"password\": \"123456\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/auth/login",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFlMzkzNDE0LTIxMTEtNDMwMi1iN2QzLWVmNTdjMDUyYzYyZiIsImVtYWlsIjoidGVjaDJAdGVzdC5jb20iLCJuYW1lIjoiVGVjaDIiLCJyb2xlIjoiVEVDSE5JQ0lBTiIsImlhdCI6MTc4NTQyMDY2OSwiZXhwIjoxNzg2NzE2NjY5fQ.bpXRGlJPPBffvTRS84YcAdKUT3CGR_vmkdL9W0dxJyk; Path=/; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "547"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"223-81ztV7eebQf2w86Z2IOUAmWSNx4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:11:09 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFlMzkzNDE0LTIxMTEtNDMwMi1iN2QzLWVmNTdjMDUyYzYyZiIsImVtYWlsIjoidGVjaDJAdGVzdC5jb20iLCJuYW1lIjoiVGVjaDIiLCJyb2xlIjoiVEVDSE5JQ0lBTiIsImlhdCI6MTc4NTQyMDY2OSwiZXhwIjoxNzg1NTA3MDY5fQ.hbim-l-q5aR3DOqrRyWf04v2H075DBW4-VRMRhf8TiY\",\n        \"user\": {\n            \"id\": \"1e393414-2111-4302-b7d3-ef57c052c62f\",\n            \"name\": \"Tech2\",\n            \"email\": \"tech2@test.com\",\n            \"role\": \"TECHNICIAN\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-30T14:08:33.041Z\",\n            \"updatedAt\": \"2026-07-30T14:08:33.041Z\"\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Login (Admin)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@test.com\",\n  \"password\": \"admin1234\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/auth/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Login (Admin)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"admin@test.com\",\n  \"password\": \"admin1234\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/auth/login",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Set-Cookie",
+                  "value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAwODE3MTNiLTMyMWQtNGU5MS1iOTI1LTQxYmMxNDhiMDA3OSIsImVtYWlsIjoiYWRtaW5AdGVzdC5jb20iLCJuYW1lIjoiQWRtaW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3ODU0MjA2ODksImV4cCI6MTc4NjcxNjY4OX0.z7atbbGmiLeqRMjZ4PtnBaffDNVshDYT7vrtN4rRolc; Path=/; HttpOnly; SameSite=Lax"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "535"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"217-aqkT2K1JaXh70iB7CVtC+1t8gZc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:11:29 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAwODE3MTNiLTMyMWQtNGU5MS1iOTI1LTQxYmMxNDhiMDA3OSIsImVtYWlsIjoiYWRtaW5AdGVzdC5jb20iLCJuYW1lIjoiQWRtaW4iLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3ODU0MjA2ODksImV4cCI6MTc4NTUwNzA4OX0.4eHFhEvayPlz1vCMVIbM2d-MWO4srWwV93qw3TFgOIs\",\n        \"user\": {\n            \"id\": \"0081713b-321d-4e91-b925-41bc148b0079\",\n            \"name\": \"Admin\",\n            \"email\": \"admin@test.com\",\n            \"role\": \"ADMIN\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-27T16:38:48.951Z\",\n            \"updatedAt\": \"2026-07-27T16:38:48.951Z\"\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Me",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{customer_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/auth/me",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "me"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Me",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/auth/me",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "auth",
+                    "me"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "222"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"de-xS8Vef48rszHNlDS7bwN8+5G564\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:12:07 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"User retrieved successfully\",\n    \"data\": {\n        \"id\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n        \"name\": \"Cus2\",\n        \"email\": \"cus2@test.com\",\n        \"role\": \"CUSTOMER\",\n        \"status\": \"ACTIVE\",\n        \"createdAt\": \"2026-07-30T14:07:45.191Z\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Get All Categories (Public)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/categories",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "categories"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Categories (Public)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/categories",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "824"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"338-RTztJEZejOlp9zZ/svZihskN+ik\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:12:27 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Categories retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"703df282-1563-4c4d-bf17-f55cc19d8f7c\",\n            \"name\": \"Carpentry\",\n            \"description\": \"Furniture repair and woodwork\",\n            \"createdAt\": \"2026-07-27T16:45:16.053Z\"\n        },\n        {\n            \"id\": \"0fa27fc1-b729-4b9d-9463-ccb7a5909fd4\",\n            \"name\": \"Painting\",\n            \"description\": \"Interior and exterior painting\",\n            \"createdAt\": \"2026-07-27T16:38:49.886Z\"\n        },\n        {\n            \"id\": \"dd86456c-c001-42ef-a705-1d28455a99be\",\n            \"name\": \"Cleaning\",\n            \"description\": \"Home and office cleaning services\",\n            \"createdAt\": \"2026-07-27T16:38:49.782Z\"\n        },\n        {\n            \"id\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n            \"name\": \"Electrical\",\n            \"description\": \"Wiring, switches, appliance repair\",\n            \"createdAt\": \"2026-07-27T16:38:49.677Z\"\n        },\n        {\n            \"id\": \"6e546af7-07b5-4e75-bc5d-5bbc533fa20f\",\n            \"name\": \"Plumbing\",\n            \"description\": \"Pipe repair, leak fixing\",\n            \"createdAt\": \"2026-07-27T16:38:49.572Z\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Category By ID (Public)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/categories/44c28ca5-ef16-486e-9b2b-a547fe68a55c",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "44c28ca5-ef16-486e-9b2b-a547fe68a55c"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Category By ID (Public)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/categories/44c28ca5-ef16-486e-9b2b-a547fe68a55c",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories",
+                    "44c28ca5-ef16-486e-9b2b-a547fe68a55c"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "223"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"df-nyyShAasvAoFY6g7U99koM9A0cg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:12:41 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Category retrieved successfully\",\n    \"data\": {\n        \"id\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n        \"name\": \"Electrical\",\n        \"description\": \"Wiring, switches, appliance repair\",\n        \"createdAt\": \"2026-07-27T16:38:49.677Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Category (Admin only)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Carpentry\",\n  \"description\": \"Furniture repair and woodwork\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/categories",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "categories"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Category (Admin only)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Carpentry\",\n  \"description\": \"Furniture repair and woodwork\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/categories",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "595"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"253-SpLjAQOxkk7WZEf9t9FTbjhIqv8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:12:53 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"message\": \"Category with this name already exists\",\n    \"errorDetails\": {\n        \"name\": \"AppError\",\n        \"stack\": \"Error: Category with this name already exists\\n    at Object.createCategory (D:\\\\ALL WORKing Folder\\\\NEXT-ph\\\\FixitNow1\\\\src\\\\module\\\\category\\\\category.service.ts:12:11)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\\n    at async <anonymous> (D:\\\\ALL WORKing Folder\\\\NEXT-ph\\\\FixitNow1\\\\src\\\\module\\\\category\\\\category.controller.ts:10:18)\\n    at async <anonymous> (D:\\\\ALL WORKing Folder\\\\NEXT-ph\\\\FixitNow1\\\\src\\\\utils\\\\catchAsync.ts:6:13)\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Category (Admin only)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"description\": \"Updated description Plumbing\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/categories/6e546af7-07b5-4e75-bc5d-5bbc533fa20f",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "6e546af7-07b5-4e75-bc5d-5bbc533fa20f"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Category (Admin only)",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"description\": \"Updated description Plumbing\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/categories/6e546af7-07b5-4e75-bc5d-5bbc533fa20f",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories",
+                    "6e546af7-07b5-4e75-bc5d-5bbc533fa20f"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "213"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"d5-l1+WjZvkNcU9ul2EiqWCv7cAEfE\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:13:57 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Category updated successfully\",\n    \"data\": {\n        \"id\": \"6e546af7-07b5-4e75-bc5d-5bbc533fa20f\",\n        \"name\": \"Plumbing\",\n        \"description\": \"Updated description Plumbing\",\n        \"createdAt\": \"2026-07-27T16:38:49.572Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Category (Admin only)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/categories/6e546af7-07b5-4e75-bc5d-5bbc533fa20f",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "6e546af7-07b5-4e75-bc5d-5bbc533fa20f"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Category (Admin only)",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/categories/6e546af7-07b5-4e75-bc5d-5bbc533fa20f",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "categories",
+                    "6e546af7-07b5-4e75-bc5d-5bbc533fa20f"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "70"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"46-epUFmfKSZiPoziD5bLBdgnBfyF4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:14:11 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Category deleted successfully\",\n    \"data\": null\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Technicians",
+      "item": [
+        {
+          "name": "Get All Technicians (Public)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/technicians",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "technicians"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Technicians (Public)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/technicians",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "technicians"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2052"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"804-KnwxgJJSCIxl2y+p5cKoFup0BGo\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:14:51 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Technicians retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"7ab97fda-860f-4cc3-a18f-a83e62db37e5\",\n            \"userId\": \"edd49567-5f7f-45aa-81b1-2328e78f4079\",\n            \"bio\": null,\n            \"experience\": null,\n            \"skills\": [],\n            \"hourlyRate\": null,\n            \"location\": null,\n            \"avgRating\": 0,\n            \"createdAt\": \"2026-07-27T18:04:46.924Z\",\n            \"updatedAt\": \"2026-07-27T18:04:46.924Z\",\n            \"user\": {\n                \"name\": \"Ar1\",\n                \"email\": \"ar1@example.com\"\n            },\n            \"services\": []\n        },\n        {\n            \"id\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"userId\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n            \"bio\": \"Experienced electrician\",\n            \"experience\": 5,\n            \"skills\": [\n                \"wiring\",\n                \"installation\"\n            ],\n            \"hourlyRate\": 25,\n            \"location\": \"Chittagong\",\n            \"avgRating\": 5,\n            \"createdAt\": \"2026-07-27T18:13:02.318Z\",\n            \"updatedAt\": \"2026-07-29T18:27:17.257Z\",\n            \"user\": {\n                \"name\": \"Ab2\",\n                \"email\": \"ab2@example.com\"\n            },\n            \"services\": [\n                {\n                    \"id\": \"b98fccba-b657-4dfb-9ce5-806f52da6987\",\n                    \"title\": \"AC Repair & Servicing\",\n                    \"description\": \"Full AC checkup and gas refill\",\n                    \"price\": 50,\n                    \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                    \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                    \"createdAt\": \"2026-07-28T08:52:22.222Z\",\n                    \"updatedAt\": \"2026-07-28T08:52:22.222Z\"\n                },\n                {\n                    \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n                    \"title\": \"AC Repair & Servicing\",\n                    \"description\": \"Full AC checkup and gas refill\",\n                    \"price\": 100,\n                    \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                    \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                    \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n                    \"updatedAt\": \"2026-07-30T07:46:24.410Z\"\n                }\n            ]\n        },\n        {\n            \"id\": \"7cdf93f4-0aff-40b1-b050-cb2a6950588d\",\n            \"userId\": \"fa24e409-53f4-4c68-9260-32ecd1f72e34\",\n            \"bio\": null,\n            \"experience\": null,\n            \"skills\": [],\n            \"hourlyRate\": null,\n            \"location\": null,\n            \"avgRating\": 0,\n            \"createdAt\": \"2026-07-30T07:01:18.837Z\",\n            \"updatedAt\": \"2026-07-30T07:01:18.837Z\",\n            \"user\": {\n                \"name\": \"Tech\",\n                \"email\": \"tech1@test.com\"\n            },\n            \"services\": []\n        },\n        {\n            \"id\": \"d2faa0c3-659e-4eee-90f2-becdd45fc165\",\n            \"userId\": \"1e393414-2111-4302-b7d3-ef57c052c62f\",\n            \"bio\": null,\n            \"experience\": null,\n            \"skills\": [],\n            \"hourlyRate\": null,\n            \"location\": null,\n            \"avgRating\": 0,\n            \"createdAt\": \"2026-07-30T14:08:33.102Z\",\n            \"updatedAt\": \"2026-07-30T14:08:33.102Z\",\n            \"user\": {\n                \"name\": \"Tech2\",\n                \"email\": \"tech2@test.com\"\n            },\n            \"services\": []\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get All Technicians - Filtered (Public)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/technicians?location=Chittagong&minRating=4",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "technicians"
+              ],
+              "query": [
+                {
+                  "key": "location",
+                  "value": "Chittagong"
+                },
+                {
+                  "key": "minRating",
+                  "value": "4"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Technicians - Filtered (Public)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/technicians?location=Chittagong&minRating=4",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "technicians"
+                  ],
+                  "query": [
+                    {
+                      "key": "location",
+                      "value": "Chittagong"
+                    },
+                    {
+                      "key": "minRating",
+                      "value": "4"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1082"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"43a-2CR/aWaD6kKWwopyWDVmHzKVHis\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:15:05 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Technicians retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"userId\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n            \"bio\": \"Experienced electrician\",\n            \"experience\": 5,\n            \"skills\": [\n                \"wiring\",\n                \"installation\"\n            ],\n            \"hourlyRate\": 25,\n            \"location\": \"Chittagong\",\n            \"avgRating\": 5,\n            \"createdAt\": \"2026-07-27T18:13:02.318Z\",\n            \"updatedAt\": \"2026-07-29T18:27:17.257Z\",\n            \"user\": {\n                \"name\": \"Ab2\",\n                \"email\": \"ab2@example.com\"\n            },\n            \"services\": [\n                {\n                    \"id\": \"b98fccba-b657-4dfb-9ce5-806f52da6987\",\n                    \"title\": \"AC Repair & Servicing\",\n                    \"description\": \"Full AC checkup and gas refill\",\n                    \"price\": 50,\n                    \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                    \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                    \"createdAt\": \"2026-07-28T08:52:22.222Z\",\n                    \"updatedAt\": \"2026-07-28T08:52:22.222Z\"\n                },\n                {\n                    \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n                    \"title\": \"AC Repair & Servicing\",\n                    \"description\": \"Full AC checkup and gas refill\",\n                    \"price\": 100,\n                    \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                    \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                    \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n                    \"updatedAt\": \"2026-07-30T07:46:24.410Z\"\n                }\n            ]\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Technician By ID (Public)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/technicians/aa33a91f-878f-4213-90a2-f5806fdb0ded",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "technicians",
+                "aa33a91f-878f-4213-90a2-f5806fdb0ded"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Technician By ID (Public)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/technicians/aa33a91f-878f-4213-90a2-f5806fdb0ded",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "technicians",
+                    "aa33a91f-878f-4213-90a2-f5806fdb0ded"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1404"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"57c-jf+Uust+YPam4QMKWT50hinyzpk\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:15:18 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Technician retrieved successfully\",\n    \"data\": {\n        \"id\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n        \"userId\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n        \"bio\": \"Experienced electrician\",\n        \"experience\": 5,\n        \"skills\": [\n            \"wiring\",\n            \"installation\"\n        ],\n        \"hourlyRate\": 25,\n        \"location\": \"Chittagong\",\n        \"avgRating\": 5,\n        \"createdAt\": \"2026-07-27T18:13:02.318Z\",\n        \"updatedAt\": \"2026-07-29T18:27:17.257Z\",\n        \"user\": {\n            \"name\": \"Ab2\",\n            \"email\": \"ab2@example.com\"\n        },\n        \"services\": [\n            {\n                \"id\": \"b98fccba-b657-4dfb-9ce5-806f52da6987\",\n                \"title\": \"AC Repair & Servicing\",\n                \"description\": \"Full AC checkup and gas refill\",\n                \"price\": 50,\n                \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"createdAt\": \"2026-07-28T08:52:22.222Z\",\n                \"updatedAt\": \"2026-07-28T08:52:22.222Z\"\n            },\n            {\n                \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n                \"title\": \"AC Repair & Servicing\",\n                \"description\": \"Full AC checkup and gas refill\",\n                \"price\": 100,\n                \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n                \"updatedAt\": \"2026-07-30T07:46:24.410Z\"\n            }\n        ],\n        \"reviews\": [\n            {\n                \"id\": \"ef532987-045c-47b8-9c0a-0bae10dc525d\",\n                \"bookingId\": \"3bc626ae-d4d5-47b3-a42f-25494ba5950f\",\n                \"customerId\": \"efea610a-1b3b-4fab-9125-00048623cd00\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"rating\": 5,\n                \"comment\": \"Excellent AC repair service, very professional!\",\n                \"createdAt\": \"2026-07-29T18:27:17.146Z\"\n            }\n        ]\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get My Profile (Technician)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{technician_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/technicians/me/profile",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "technicians",
+                "me",
+                "profile"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get My Profile (Technician)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/technicians/me/profile",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "technicians",
+                    "me",
+                    "profile"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1197"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4ad-Dez0T0UHF5+0Lp8qAaWv7CndWbY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:15:30 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Profile retrieved successfully\",\n    \"data\": {\n        \"id\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n        \"userId\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n        \"bio\": \"Experienced electrician\",\n        \"experience\": 5,\n        \"skills\": [\n            \"wiring\",\n            \"installation\"\n        ],\n        \"hourlyRate\": 25,\n        \"location\": \"Chittagong\",\n        \"avgRating\": 5,\n        \"createdAt\": \"2026-07-27T18:13:02.318Z\",\n        \"updatedAt\": \"2026-07-29T18:27:17.257Z\",\n        \"availability\": [\n            {\n                \"id\": \"b5b3d4a1-e0e0-434a-ab9e-ad26e5726968\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"dayOfWeek\": 1,\n                \"startTime\": \"09:00\",\n                \"endTime\": \"17:00\"\n            }\n        ],\n        \"services\": [\n            {\n                \"id\": \"b98fccba-b657-4dfb-9ce5-806f52da6987\",\n                \"title\": \"AC Repair & Servicing\",\n                \"description\": \"Full AC checkup and gas refill\",\n                \"price\": 50,\n                \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"createdAt\": \"2026-07-28T08:52:22.222Z\",\n                \"updatedAt\": \"2026-07-28T08:52:22.222Z\"\n            },\n            {\n                \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n                \"title\": \"AC Repair & Servicing\",\n                \"description\": \"Full AC checkup and gas refill\",\n                \"price\": 100,\n                \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n                \"updatedAt\": \"2026-07-30T07:46:24.410Z\"\n            }\n        ]\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update My Profile (Technician)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{technician_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"bio\": \"Experienced electrician\",\n  \"experience\": 5,\n  \"skills\": [\"wiring\", \"installation\"],\n  \"hourlyRate\": 25,\n  \"location\": \"Dhaka\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/technicians/me/profile",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "technicians",
+                "me",
+                "profile"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update My Profile (Technician)",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"bio\": \"Experienced electrician\",\n  \"experience\": 5,\n  \"skills\": [\"wiring\", \"installation\"],\n  \"hourlyRate\": 25,\n  \"location\": \"Dhaka\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/technicians/me/profile",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "technicians",
+                    "me",
+                    "profile"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "367"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"16f-EFejQ5Hvib8DAT4RhKXMmsQAvsg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:16:09 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Profile updated successfully\",\n    \"data\": {\n        \"id\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n        \"userId\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n        \"bio\": \"Experienced electrician\",\n        \"experience\": 5,\n        \"skills\": [\n            \"wiring\",\n            \"installation\"\n        ],\n        \"hourlyRate\": 25,\n        \"location\": \"Dhaka\",\n        \"avgRating\": 5,\n        \"createdAt\": \"2026-07-27T18:13:02.318Z\",\n        \"updatedAt\": \"2026-07-30T14:16:09.760Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Set My Availability (Technician)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{technician_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"slots\": [\n    { \"dayOfWeek\": 1, \"startTime\": \"09:00\", \"endTime\": \"17:00\" }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/technicians/me/availability",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "technicians",
+                "me",
+                "availability"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Set My Availability (Technician)",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"slots\": [\n    { \"dayOfWeek\": 1, \"startTime\": \"09:00\", \"endTime\": \"17:00\" }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/technicians/me/availability",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "technicians",
+                    "me",
+                    "availability"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "81"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"51-qGYGm/9QdK+LCnVYngywEPNIkMg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:16:21 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Availability updated successfully\",\n    \"data\": {\n        \"count\": 1\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "item": [
+        {
+          "name": "Get All Services (Public)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/services",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "services"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Services (Public)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/services",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "services"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1720"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"6b8-lHicasmWg+y8Swre8aMfOgtN5Qc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:16:33 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Services retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"b98fccba-b657-4dfb-9ce5-806f52da6987\",\n            \"title\": \"AC Repair & Servicing\",\n            \"description\": \"Full AC checkup and gas refill\",\n            \"price\": 50,\n            \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n            \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"createdAt\": \"2026-07-28T08:52:22.222Z\",\n            \"updatedAt\": \"2026-07-28T08:52:22.222Z\",\n            \"category\": {\n                \"id\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                \"name\": \"Electrical\",\n                \"description\": \"Wiring, switches, appliance repair\",\n                \"createdAt\": \"2026-07-27T16:38:49.677Z\"\n            },\n            \"technician\": {\n                \"id\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"userId\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n                \"bio\": \"Experienced electrician\",\n                \"experience\": 5,\n                \"skills\": [\n                    \"wiring\",\n                    \"installation\"\n                ],\n                \"hourlyRate\": 25,\n                \"location\": \"Dhaka\",\n                \"avgRating\": 5,\n                \"createdAt\": \"2026-07-27T18:13:02.318Z\",\n                \"updatedAt\": \"2026-07-30T14:16:09.760Z\",\n                \"user\": {\n                    \"name\": \"Ab2\"\n                }\n            }\n        },\n        {\n            \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n            \"title\": \"AC Repair & Servicing\",\n            \"description\": \"Full AC checkup and gas refill\",\n            \"price\": 100,\n            \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n            \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n            \"updatedAt\": \"2026-07-30T07:46:24.410Z\",\n            \"category\": {\n                \"id\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                \"name\": \"Electrical\",\n                \"description\": \"Wiring, switches, appliance repair\",\n                \"createdAt\": \"2026-07-27T16:38:49.677Z\"\n            },\n            \"technician\": {\n                \"id\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"userId\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n                \"bio\": \"Experienced electrician\",\n                \"experience\": 5,\n                \"skills\": [\n                    \"wiring\",\n                    \"installation\"\n                ],\n                \"hourlyRate\": 25,\n                \"location\": \"Dhaka\",\n                \"avgRating\": 5,\n                \"createdAt\": \"2026-07-27T18:13:02.318Z\",\n                \"updatedAt\": \"2026-07-30T14:16:09.760Z\",\n                \"user\": {\n                    \"name\": \"Ab2\"\n                }\n            }\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get All Services - Filtered (Public)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/services?categoryId=Electrical&minPrice=10&maxPrice=100",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "services"
+              ],
+              "query": [
+                {
+                  "key": "categoryId",
+                  "value": "Electrical"
+                },
+                {
+                  "key": "minPrice",
+                  "value": "10"
+                },
+                {
+                  "key": "maxPrice",
+                  "value": "100"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Services - Filtered (Public)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/services?categoryId=Electrical&minPrice=10&maxPrice=100",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "services"
+                  ],
+                  "query": [
+                    {
+                      "key": "categoryId",
+                      "value": "Electrical"
+                    },
+                    {
+                      "key": "minPrice",
+                      "value": "10"
+                    },
+                    {
+                      "key": "maxPrice",
+                      "value": "100"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "70"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"46-HVOWhfeJgVq8UNBrZjm6mhUz1VA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:16:53 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Services retrieved successfully\",\n    \"data\": []\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Service By ID (Public)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/services/b98fccba-b657-4dfb-9ce5-806f52da6987",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "services",
+                "b98fccba-b657-4dfb-9ce5-806f52da6987"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Service By ID (Public)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/services/b98fccba-b657-4dfb-9ce5-806f52da6987",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "services",
+                    "b98fccba-b657-4dfb-9ce5-806f52da6987"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1216"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4c0-Kaad3+SHTaVSuocNR9rg1zR9Dt4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:17:05 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Service retrieved successfully\",\n    \"data\": {\n        \"id\": \"b98fccba-b657-4dfb-9ce5-806f52da6987\",\n        \"title\": \"AC Repair & Servicing\",\n        \"description\": \"Full AC checkup and gas refill\",\n        \"price\": 50,\n        \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n        \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n        \"createdAt\": \"2026-07-28T08:52:22.222Z\",\n        \"updatedAt\": \"2026-07-28T08:52:22.222Z\",\n        \"category\": {\n            \"id\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n            \"name\": \"Electrical\",\n            \"description\": \"Wiring, switches, appliance repair\",\n            \"createdAt\": \"2026-07-27T16:38:49.677Z\"\n        },\n        \"technician\": {\n            \"id\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"userId\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n            \"bio\": \"Experienced electrician\",\n            \"experience\": 5,\n            \"skills\": [\n                \"wiring\",\n                \"installation\"\n            ],\n            \"hourlyRate\": 25,\n            \"location\": \"Dhaka\",\n            \"avgRating\": 5,\n            \"createdAt\": \"2026-07-27T18:13:02.318Z\",\n            \"updatedAt\": \"2026-07-30T14:16:09.760Z\",\n            \"user\": {\n                \"name\": \"Ab2\"\n            },\n            \"reviews\": [\n                {\n                    \"id\": \"ef532987-045c-47b8-9c0a-0bae10dc525d\",\n                    \"bookingId\": \"3bc626ae-d4d5-47b3-a42f-25494ba5950f\",\n                    \"customerId\": \"efea610a-1b3b-4fab-9125-00048623cd00\",\n                    \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                    \"rating\": 5,\n                    \"comment\": \"Excellent AC repair service, very professional!\",\n                    \"createdAt\": \"2026-07-29T18:27:17.146Z\"\n                }\n            ]\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Service (Technician only)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{technician_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"AC Repair & Servicing\",\n  \"description\": \"Full AC checkup and gas refill\",\n  \"price\": 50,\n  \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/services",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "services"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Service (Technician only)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"AC Repair & Servicing\",\n  \"description\": \"Full AC checkup and gas refill\",\n  \"price\": 50,\n  \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/services",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "services"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "384"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"180-HsAP+o57IVEp+wMJ6MnysvVPjeI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:18:33 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Service created successfully\",\n    \"data\": {\n        \"id\": \"e3708560-0409-4209-87bc-22827fcd6882\",\n        \"title\": \"AC Repair & Servicing\",\n        \"description\": \"Full AC checkup and gas refill\",\n        \"price\": 50,\n        \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n        \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n        \"createdAt\": \"2026-07-30T14:18:32.934Z\",\n        \"updatedAt\": \"2026-07-30T14:18:32.934Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Service (Technician only)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{technician_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"price\": 100\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/services/a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "services",
+                "a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Service (Technician only)",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"price\": 100\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/services/a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "services",
+                    "a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "385"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"181-oPrVGqC0Zw7ql5N34AomYNNc2uE\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:18:46 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Service updated successfully\",\n    \"data\": {\n        \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n        \"title\": \"AC Repair & Servicing\",\n        \"description\": \"Full AC checkup and gas refill\",\n        \"price\": 100,\n        \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n        \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n        \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n        \"updatedAt\": \"2026-07-30T14:18:46.155Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Service (Technician only)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{technician_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/services/a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "services",
+                "a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Bookings",
+      "item": [
+        {
+          "name": "Create Booking (Customer)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5MTc3NDZkLWU3ZTgtNGY2MC05MjJlLWJhY2IxYzdiYjg4MCIsImVtYWlsIjoiY3VzMkB0ZXN0LmNvbSIsIm5hbWUiOiJDdXMyIiwicm9sZSI6IkNVU1RPTUVSIiwiaWF0IjoxNzg1NDIwNTMyLCJleHAiOjE3ODU1MDY5MzJ9.f4M4eMm5csxB6WZgOU9TCMdHceFosB1fU66Y4fE5ywI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n  \"scheduledAt\": \"2026-09-15T10:00:00.000Z\",\n  \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/bookings",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Booking (Customer)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n  \"scheduledAt\": \"2026-09-15T10:00:00.000Z\",\n  \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/bookings",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "bookings"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "454"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1c6-Py50e5y9yXlJiv9SCWGPuu/AvvU\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:22:51 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Booking created successfully\",\n    \"data\": {\n        \"id\": \"4262db8a-7449-4000-a224-e70124b46c19\",\n        \"customerId\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n        \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n        \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n        \"scheduledAt\": \"2026-09-15T10:00:00.000Z\",\n        \"status\": \"REQUESTED\",\n        \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\",\n        \"createdAt\": \"2026-07-30T14:22:51.291Z\",\n        \"updatedAt\": \"2026-07-30T14:22:51.291Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get My Bookings (Customer)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5MTc3NDZkLWU3ZTgtNGY2MC05MjJlLWJhY2IxYzdiYjg4MCIsImVtYWlsIjoiY3VzMkB0ZXN0LmNvbSIsIm5hbWUiOiJDdXMyIiwicm9sZSI6IkNVU1RPTUVSIiwiaWF0IjoxNzg1NDIwNTMyLCJleHAiOjE3ODU1MDY5MzJ9.f4M4eMm5csxB6WZgOU9TCMdHceFosB1fU66Y4fE5ywI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/bookings",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get My Bookings (Customer)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/bookings",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "bookings"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1128"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"468-h3RZXO0ePgC9ANLtuMV8adJLn5E\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:23:55 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Bookings retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"4262db8a-7449-4000-a224-e70124b46c19\",\n            \"customerId\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n            \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n            \"scheduledAt\": \"2026-09-15T10:00:00.000Z\",\n            \"status\": \"REQUESTED\",\n            \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\",\n            \"createdAt\": \"2026-07-30T14:22:51.291Z\",\n            \"updatedAt\": \"2026-07-30T14:22:51.291Z\",\n            \"service\": {\n                \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n                \"title\": \"AC Repair & Servicing\",\n                \"description\": \"Full AC checkup and gas refill\",\n                \"price\": 100,\n                \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n                \"updatedAt\": \"2026-07-30T14:18:46.155Z\"\n            },\n            \"technician\": {\n                \"id\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"userId\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n                \"bio\": \"Experienced electrician\",\n                \"experience\": 5,\n                \"skills\": [\n                    \"wiring\",\n                    \"installation\"\n                ],\n                \"hourlyRate\": 25,\n                \"location\": \"Dhaka\",\n                \"avgRating\": 5,\n                \"createdAt\": \"2026-07-27T18:13:02.318Z\",\n                \"updatedAt\": \"2026-07-30T14:16:09.760Z\",\n                \"user\": {\n                    \"name\": \"Ab2\"\n                }\n            }\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get My Bookings (Technician)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgyMDY0OTIyLTdiMTAtNGE0Yi1hYzhiLTc1OGI2ODFhZjUzOCIsImVtYWlsIjoiYWIyQGV4YW1wbGUuY29tIiwibmFtZSI6IkFiMiIsInJvbGUiOiJURUNITklDSUFOIiwiaWF0IjoxNzg1NDIyMjQ2LCJleHAiOjE3ODU1MDg2NDZ9.fM2zXeayL9_dPnuxfOsR48wGES6qz6cgiSNUBHibhDo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/bookings",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "bookings"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get My Bookings (Technician)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/bookings",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "bookings"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2391"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"957-b5s/q3IY8kk23BvX64f1hRpSBCU\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:40:46 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Bookings retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"4262db8a-7449-4000-a224-e70124b46c19\",\n            \"customerId\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n            \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n            \"scheduledAt\": \"2026-09-15T10:00:00.000Z\",\n            \"status\": \"REQUESTED\",\n            \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\",\n            \"createdAt\": \"2026-07-30T14:22:51.291Z\",\n            \"updatedAt\": \"2026-07-30T14:22:51.291Z\",\n            \"service\": {\n                \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n                \"title\": \"AC Repair & Servicing\",\n                \"description\": \"Full AC checkup and gas refill\",\n                \"price\": 100,\n                \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n                \"updatedAt\": \"2026-07-30T14:18:46.155Z\"\n            },\n            \"customer\": {\n                \"name\": \"Cus2\",\n                \"email\": \"cus2@test.com\"\n            }\n        },\n        {\n            \"id\": \"e089127f-507f-4de3-b6f4-06d7955d379d\",\n            \"customerId\": \"b76f97cf-ae76-44ff-9cbb-f7359bb01988\",\n            \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n            \"scheduledAt\": \"2026-09-15T10:00:00.000Z\",\n            \"status\": \"IN_PROGRESS\",\n            \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\",\n            \"createdAt\": \"2026-07-30T07:34:34.474Z\",\n            \"updatedAt\": \"2026-07-30T07:57:38.005Z\",\n            \"service\": {\n                \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n                \"title\": \"AC Repair & Servicing\",\n                \"description\": \"Full AC checkup and gas refill\",\n                \"price\": 100,\n                \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n                \"updatedAt\": \"2026-07-30T14:18:46.155Z\"\n            },\n            \"customer\": {\n                \"name\": \"Cus\",\n                \"email\": \"cus1@test.com\"\n            }\n        },\n        {\n            \"id\": \"3bc626ae-d4d5-47b3-a42f-25494ba5950f\",\n            \"customerId\": \"efea610a-1b3b-4fab-9125-00048623cd00\",\n            \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n            \"scheduledAt\": \"2026-08-15T10:00:00.000Z\",\n            \"status\": \"COMPLETED\",\n            \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\",\n            \"createdAt\": \"2026-07-28T15:41:36.257Z\",\n            \"updatedAt\": \"2026-07-29T18:23:26.093Z\",\n            \"service\": {\n                \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n                \"title\": \"AC Repair & Servicing\",\n                \"description\": \"Full AC checkup and gas refill\",\n                \"price\": 100,\n                \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n                \"updatedAt\": \"2026-07-30T14:18:46.155Z\"\n            },\n            \"customer\": {\n                \"name\": \"Arnob\",\n                \"email\": \"arnob@example.com\"\n            }\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Booking By ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgyMDY0OTIyLTdiMTAtNGE0Yi1hYzhiLTc1OGI2ODFhZjUzOCIsImVtYWlsIjoiYWIyQGV4YW1wbGUuY29tIiwibmFtZSI6IkFiMiIsInJvbGUiOiJURUNITklDSUFOIiwiaWF0IjoxNzg1NDIyMjQ2LCJleHAiOjE3ODU1MDg2NDZ9.fM2zXeayL9_dPnuxfOsR48wGES6qz6cgiSNUBHibhDo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/bookings/4262db8a-7449-4000-a224-e70124b46c19",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "4262db8a-7449-4000-a224-e70124b46c19"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Booking By ID",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/bookings/4262db8a-7449-4000-a224-e70124b46c19",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "bookings",
+                    "4262db8a-7449-4000-a224-e70124b46c19"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1275"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4fb-eD0H7xXPbC7Mn5UTh6xpg2bX8sY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:41:45 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Booking retrieved successfully\",\n    \"data\": {\n        \"id\": \"4262db8a-7449-4000-a224-e70124b46c19\",\n        \"customerId\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n        \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n        \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n        \"scheduledAt\": \"2026-09-15T10:00:00.000Z\",\n        \"status\": \"REQUESTED\",\n        \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\",\n        \"createdAt\": \"2026-07-30T14:22:51.291Z\",\n        \"updatedAt\": \"2026-07-30T14:22:51.291Z\",\n        \"service\": {\n            \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n            \"title\": \"AC Repair & Servicing\",\n            \"description\": \"Full AC checkup and gas refill\",\n            \"price\": 100,\n            \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n            \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n            \"updatedAt\": \"2026-07-30T14:18:46.155Z\"\n        },\n        \"customer\": {\n            \"id\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n            \"name\": \"Cus2\",\n            \"email\": \"cus2@test.com\"\n        },\n        \"technician\": {\n            \"id\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"userId\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n            \"bio\": \"Experienced electrician\",\n            \"experience\": 5,\n            \"skills\": [\n                \"wiring\",\n                \"installation\"\n            ],\n            \"hourlyRate\": 25,\n            \"location\": \"Dhaka\",\n            \"avgRating\": 5,\n            \"createdAt\": \"2026-07-27T18:13:02.318Z\",\n            \"updatedAt\": \"2026-07-30T14:16:09.760Z\",\n            \"user\": {\n                \"name\": \"Ab2\",\n                \"email\": \"ab2@example.com\"\n            }\n        },\n        \"payment\": null,\n        \"review\": null\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Booking Status - Accept (Technician)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgyMDY0OTIyLTdiMTAtNGE0Yi1hYzhiLTc1OGI2ODFhZjUzOCIsImVtYWlsIjoiYWIyQGV4YW1wbGUuY29tIiwibmFtZSI6IkFiMiIsInJvbGUiOiJURUNITklDSUFOIiwiaWF0IjoxNzg1NDIyMjQ2LCJleHAiOjE3ODU1MDg2NDZ9.fM2zXeayL9_dPnuxfOsR48wGES6qz6cgiSNUBHibhDo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"ACCEPTED\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/bookings/4262db8a-7449-4000-a224-e70124b46c19/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "4262db8a-7449-4000-a224-e70124b46c19",
+                "status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Booking Status - Accept (Technician)",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"status\": \"ACCEPTED\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/bookings/4262db8a-7449-4000-a224-e70124b46c19/status",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "bookings",
+                    "4262db8a-7449-4000-a224-e70124b46c19",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "460"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1cc-QDxtxU7ik8v7JaXbjPVtGvpxw6w\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:42:45 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Booking status updated successfully\",\n    \"data\": {\n        \"id\": \"4262db8a-7449-4000-a224-e70124b46c19\",\n        \"customerId\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n        \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n        \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n        \"scheduledAt\": \"2026-09-15T10:00:00.000Z\",\n        \"status\": \"ACCEPTED\",\n        \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\",\n        \"createdAt\": \"2026-07-30T14:22:51.291Z\",\n        \"updatedAt\": \"2026-07-30T14:42:45.823Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Booking Status - Decline (Technician)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgyMDY0OTIyLTdiMTAtNGE0Yi1hYzhiLTc1OGI2ODFhZjUzOCIsImVtYWlsIjoiYWIyQGV4YW1wbGUuY29tIiwibmFtZSI6IkFiMiIsInJvbGUiOiJURUNITklDSUFOIiwiaWF0IjoxNzg1NDIyMjQ2LCJleHAiOjE3ODU1MDg2NDZ9.fM2zXeayL9_dPnuxfOsR48wGES6qz6cgiSNUBHibhDo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"DECLINED\"\n     //don't call this before completing Create Payment Session by Customer\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/bookings/e089127f-507f-4de3-b6f4-06d7955d379d/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "e089127f-507f-4de3-b6f4-06d7955d379d",
+                "status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Booking Status - Decline (Technician)",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"status\": \"DECLINED\"\n     //don't call this before completing Create Payment Session by Customer\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/bookings/e089127f-507f-4de3-b6f4-06d7955d379d/status",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "bookings",
+                    "e089127f-507f-4de3-b6f4-06d7955d379d",
+                    "status"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "619"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"26b-uCMisAnm3OwCIp94/Y1+kNiiYic\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:43:42 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"message\": \"Cannot change status from IN_PROGRESS to DECLINED\",\n    \"errorDetails\": {\n        \"name\": \"AppError\",\n        \"stack\": \"Error: Cannot change status from IN_PROGRESS to DECLINED\\n    at Object.updateBookingStatus (D:\\\\ALL WORKing Folder\\\\NEXT-ph\\\\FixitNow1\\\\src\\\\module\\\\booking\\\\booking.service.ts:148:11)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\\n    at async <anonymous> (D:\\\\ALL WORKing Folder\\\\NEXT-ph\\\\FixitNow1\\\\src\\\\module\\\\booking\\\\booking.controller.ts:46:18)\\n    at async <anonymous> (D:\\\\ALL WORKing Folder\\\\NEXT-ph\\\\FixitNow1\\\\src\\\\utils\\\\catchAsync.ts:6:13)\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Booking Status - In Progress (Technician)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjgyMDY0OTIyLTdiMTAtNGE0Yi1hYzhiLTc1OGI2ODFhZjUzOCIsImVtYWlsIjoiYWIyQGV4YW1wbGUuY29tIiwibmFtZSI6IkFiMiIsInJvbGUiOiJURUNITklDSUFOIiwiaWF0IjoxNzg1NDIyMjQ2LCJleHAiOjE3ODU1MDg2NDZ9.fM2zXeayL9_dPnuxfOsR48wGES6qz6cgiSNUBHibhDo",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"IN_PROGRESS\"\n    //don't call this before completing Create Payment Session by Customer\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/bookings/e089127f-507f-4de3-b6f4-06d7955d379d/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "e089127f-507f-4de3-b6f4-06d7955d379d",
+                "status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Booking Status - In Progress (Technician)",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"status\": \"IN_PROGRESS\"\n    //don't call this before completing Create Payment Session by Customer\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/bookings/e089127f-507f-4de3-b6f4-06d7955d379d/status",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "bookings",
+                    "e089127f-507f-4de3-b6f4-06d7955d379d",
+                    "status"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "625"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"271-CNFvl+6Zrp+MX6/vYZG32wzh7Tg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:44:20 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": false,\n    \"message\": \"Cannot change status from IN_PROGRESS to IN_PROGRESS\",\n    \"errorDetails\": {\n        \"name\": \"AppError\",\n        \"stack\": \"Error: Cannot change status from IN_PROGRESS to IN_PROGRESS\\n    at Object.updateBookingStatus (D:\\\\ALL WORKing Folder\\\\NEXT-ph\\\\FixitNow1\\\\src\\\\module\\\\booking\\\\booking.service.ts:148:11)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\\n    at async <anonymous> (D:\\\\ALL WORKing Folder\\\\NEXT-ph\\\\FixitNow1\\\\src\\\\module\\\\booking\\\\booking.controller.ts:46:18)\\n    at async <anonymous> (D:\\\\ALL WORKing Folder\\\\NEXT-ph\\\\FixitNow1\\\\src\\\\utils\\\\catchAsync.ts:6:13)\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Booking Status - Completed (Technician)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{technician_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"COMPLETED\"\n //don't call this before completing Create Payment Session by Customer\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/bookings/e089127f-507f-4de3-b6f4-06d7955d379d/status",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "e089127f-507f-4de3-b6f4-06d7955d379d",
+                "status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Booking Status - Completed (Technician)",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"status\": \"COMPLETED\"\n //don't call this before completing Create Payment Session by Customer\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/bookings/e089127f-507f-4de3-b6f4-06d7955d379d/status",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "bookings",
+                    "e089127f-507f-4de3-b6f4-06d7955d379d",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "461"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1cd-RjXOfHbNFkqXVYcuGjetH8JqdL0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:49:41 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Booking status updated successfully\",\n    \"data\": {\n        \"id\": \"e089127f-507f-4de3-b6f4-06d7955d379d\",\n        \"customerId\": \"b76f97cf-ae76-44ff-9cbb-f7359bb01988\",\n        \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n        \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n        \"scheduledAt\": \"2026-09-15T10:00:00.000Z\",\n        \"status\": \"COMPLETED\",\n        \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\",\n        \"createdAt\": \"2026-07-30T07:34:34.474Z\",\n        \"updatedAt\": \"2026-07-30T14:49:41.010Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Cancel Booking (Customer)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{customer_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/bookings/{{booking_id}}/cancel",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "bookings",
+                "{{booking_id}}",
+                "cancel"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payments",
+      "item": [
+        {
+          "name": "Create Payment Session (Customer)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5MTc3NDZkLWU3ZTgtNGY2MC05MjJlLWJhY2IxYzdiYjg4MCIsImVtYWlsIjoiY3VzMkB0ZXN0LmNvbSIsIm5hbWUiOiJDdXMyIiwicm9sZSI6IkNVU1RPTUVSIiwiaWF0IjoxNzg1NDIwNTMyLCJleHAiOjE3ODU1MDY5MzJ9.f4M4eMm5csxB6WZgOU9TCMdHceFosB1fU66Y4fE5ywI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"bookingId\": \"4262db8a-7449-4000-a224-e70124b46c19\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/payments/create",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "payments",
+                "create"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Payment Session (Customer)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"bookingId\": \"4262db8a-7449-4000-a224-e70124b46c19\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/payments/create",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "payments",
+                    "create"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "911"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"38f-fwv0eCjK3ESXsHs2SgvSUXiwUxE\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:46:18 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Payment session created successfully\",\n    \"data\": {\n        \"checkoutUrl\": \"https://checkout.stripe.com/c/pay/cs_test_a1b3bVTZiQOyoA46j3p9B5ElnPb8s2XEZPET0l99XhF0wzms5wcZw6HG7s#fidnandhYHdWcXxpYCc%2FJ2FgY2RwaXEnKSdicGRmZGhqaWBTZHdsZGtxJz8nZmprcXdqaScpJ2R1bE5gfCc%2FJ3VuWnFgdnFaMDRRfTN9UE9sT2Rvf19dR0I9a0h%2FbEpOXUpPYlZmNj1CbzJgaUJfUE1LV0x2T1UwSmpwVDVUbzJvcDFJfHI1cDd2cDdOb3BAaVMzZklfMWAwT1AwYjdTR1Q1NXN1b01vVlRVJyknY3dqaFZgd3Ngdyc%2FcXdwYCknZ2RmbmJ3anBrYUZqaWp3Jz8nJmNjY2NjYycpJ2lkfGpwcVF8dWAnPyd2bGtiaWBabHFgaCcpJ2BrZGdpYFVpZGZgbWppYWB3dic%2FcXdwYHgl\",\n        \"payment\": {\n            \"id\": \"f1ebb660-966a-4de2-a9f9-ebf97fca8dd2\",\n            \"bookingId\": \"4262db8a-7449-4000-a224-e70124b46c19\",\n            \"userId\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n            \"amount\": 100,\n            \"provider\": \"STRIPE\",\n            \"transactionId\": \"cs_test_a1b3bVTZiQOyoA46j3p9B5ElnPb8s2XEZPET0l99XhF0wzms5wcZw6HG7s\",\n            \"status\": \"PENDING\",\n            \"paidAt\": null,\n            \"createdAt\": \"2026-07-30T14:46:18.441Z\"\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get My Payment History (Customer)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5MTc3NDZkLWU3ZTgtNGY2MC05MjJlLWJhY2IxYzdiYjg4MCIsImVtYWlsIjoiY3VzMkB0ZXN0LmNvbSIsIm5hbWUiOiJDdXMyIiwicm9sZSI6IkNVU1RPTUVSIiwiaWF0IjoxNzg1NDIwNTMyLCJleHAiOjE3ODU1MDY5MzJ9.f4M4eMm5csxB6WZgOU9TCMdHceFosB1fU66Y4fE5ywI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/payments",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "payments"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get My Payment History (Customer)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/payments",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "payments"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1134"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"46e-7WwLceGPheSHMIslazz/8mLNVI4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:47:08 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Payments retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"f1ebb660-966a-4de2-a9f9-ebf97fca8dd2\",\n            \"bookingId\": \"4262db8a-7449-4000-a224-e70124b46c19\",\n            \"userId\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n            \"amount\": 100,\n            \"provider\": \"STRIPE\",\n            \"transactionId\": \"cs_test_a1b3bVTZiQOyoA46j3p9B5ElnPb8s2XEZPET0l99XhF0wzms5wcZw6HG7s\",\n            \"status\": \"PENDING\",\n            \"paidAt\": null,\n            \"createdAt\": \"2026-07-30T14:46:18.441Z\",\n            \"booking\": {\n                \"id\": \"4262db8a-7449-4000-a224-e70124b46c19\",\n                \"customerId\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n                \"scheduledAt\": \"2026-09-15T10:00:00.000Z\",\n                \"status\": \"ACCEPTED\",\n                \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\",\n                \"createdAt\": \"2026-07-30T14:22:51.291Z\",\n                \"updatedAt\": \"2026-07-30T14:42:45.823Z\",\n                \"service\": {\n                    \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n                    \"title\": \"AC Repair & Servicing\",\n                    \"description\": \"Full AC checkup and gas refill\",\n                    \"price\": 100,\n                    \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                    \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                    \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n                    \"updatedAt\": \"2026-07-30T14:18:46.155Z\"\n                }\n            }\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Payment By ID",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImM5MTc3NDZkLWU3ZTgtNGY2MC05MjJlLWJhY2IxYzdiYjg4MCIsImVtYWlsIjoiY3VzMkB0ZXN0LmNvbSIsIm5hbWUiOiJDdXMyIiwicm9sZSI6IkNVU1RPTUVSIiwiaWF0IjoxNzg1NDIwNTMyLCJleHAiOjE3ODU1MDY5MzJ9.f4M4eMm5csxB6WZgOU9TCMdHceFosB1fU66Y4fE5ywI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/payments/f1ebb660-966a-4de2-a9f9-ebf97fca8dd2",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "payments",
+                "f1ebb660-966a-4de2-a9f9-ebf97fca8dd2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Payment By ID",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/payments/f1ebb660-966a-4de2-a9f9-ebf97fca8dd2",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "payments",
+                    "f1ebb660-966a-4de2-a9f9-ebf97fca8dd2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1131"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"46b-Y4rGl/yFUq+yQ6l9nJ53z3UtFjc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:48:28 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Payment retrieved successfully\",\n    \"data\": {\n        \"id\": \"f1ebb660-966a-4de2-a9f9-ebf97fca8dd2\",\n        \"bookingId\": \"4262db8a-7449-4000-a224-e70124b46c19\",\n        \"userId\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n        \"amount\": 100,\n        \"provider\": \"STRIPE\",\n        \"transactionId\": \"cs_test_a1b3bVTZiQOyoA46j3p9B5ElnPb8s2XEZPET0l99XhF0wzms5wcZw6HG7s\",\n        \"status\": \"PENDING\",\n        \"paidAt\": null,\n        \"createdAt\": \"2026-07-30T14:46:18.441Z\",\n        \"booking\": {\n            \"id\": \"4262db8a-7449-4000-a224-e70124b46c19\",\n            \"customerId\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n            \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n            \"scheduledAt\": \"2026-09-15T10:00:00.000Z\",\n            \"status\": \"ACCEPTED\",\n            \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\",\n            \"createdAt\": \"2026-07-30T14:22:51.291Z\",\n            \"updatedAt\": \"2026-07-30T14:42:45.823Z\",\n            \"service\": {\n                \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n                \"title\": \"AC Repair & Servicing\",\n                \"description\": \"Full AC checkup and gas refill\",\n                \"price\": 100,\n                \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n                \"updatedAt\": \"2026-07-30T14:18:46.155Z\"\n            }\n        }\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "item": [
+        {
+          "name": "Create Review (Customer)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{customer_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"bookingId\": \"e089127f-507f-4de3-b6f4-06d7955d379d\",\n  //make sure booing is completed by technician\n  \"rating\": 5,\n  \"comment\": \"Excellent service\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/reviews",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reviews"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Reviews By Technician (Public)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/reviews/technician/aa33a91f-878f-4213-90a2-f5806fdb0ded",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "reviews",
+                "technician",
+                "aa33a91f-878f-4213-90a2-f5806fdb0ded"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Reviews By Technician (Public)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/reviews/technician/aa33a91f-878f-4213-90a2-f5806fdb0ded",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "reviews",
+                    "technician",
+                    "aa33a91f-878f-4213-90a2-f5806fdb0ded"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "409"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"199-yAPQ3egGZDu7E5WE/l/qZPvRwOE\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:53:04 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Reviews retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"ef532987-045c-47b8-9c0a-0bae10dc525d\",\n            \"bookingId\": \"3bc626ae-d4d5-47b3-a42f-25494ba5950f\",\n            \"customerId\": \"efea610a-1b3b-4fab-9125-00048623cd00\",\n            \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"rating\": 5,\n            \"comment\": \"Excellent AC repair service, very professional!\",\n            \"createdAt\": \"2026-07-29T18:27:17.146Z\",\n            \"customer\": {\n                \"name\": \"Arnob\"\n            }\n        }\n    ]\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Get All Users",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/admin/users",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Users",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/admin/users",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "users"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1354"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"54a-J3tZII8SUo3+hHFUtKyUKFHCSOI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:53:38 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Users retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"1e393414-2111-4302-b7d3-ef57c052c62f\",\n            \"name\": \"Tech2\",\n            \"email\": \"tech2@test.com\",\n            \"role\": \"TECHNICIAN\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-30T14:08:33.041Z\"\n        },\n        {\n            \"id\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n            \"name\": \"Cus2\",\n            \"email\": \"cus2@test.com\",\n            \"role\": \"CUSTOMER\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-30T14:07:45.191Z\"\n        },\n        {\n            \"id\": \"fa24e409-53f4-4c68-9260-32ecd1f72e34\",\n            \"name\": \"Tech\",\n            \"email\": \"tech1@test.com\",\n            \"role\": \"TECHNICIAN\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-30T07:01:18.778Z\"\n        },\n        {\n            \"id\": \"b76f97cf-ae76-44ff-9cbb-f7359bb01988\",\n            \"name\": \"Cus\",\n            \"email\": \"cus1@test.com\",\n            \"role\": \"CUSTOMER\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-30T07:00:14.446Z\"\n        },\n        {\n            \"id\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n            \"name\": \"Ab2\",\n            \"email\": \"ab2@example.com\",\n            \"role\": \"TECHNICIAN\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-27T18:13:02.148Z\"\n        },\n        {\n            \"id\": \"edd49567-5f7f-45aa-81b1-2328e78f4079\",\n            \"name\": \"Ar1\",\n            \"email\": \"ar1@example.com\",\n            \"role\": \"TECHNICIAN\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-27T18:04:46.866Z\"\n        },\n        {\n            \"id\": \"0081713b-321d-4e91-b925-41bc148b0079\",\n            \"name\": \"Admin\",\n            \"email\": \"admin@test.com\",\n            \"role\": \"ADMIN\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-27T16:38:48.951Z\"\n        },\n        {\n            \"id\": \"efea610a-1b3b-4fab-9125-00048623cd00\",\n            \"name\": \"Arnob\",\n            \"email\": \"arnob@example.com\",\n            \"role\": \"CUSTOMER\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-26T16:28:00.969Z\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get All Users - Filter by Role",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/admin/users?role=TECHNICIAN",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "role",
+                  "value": "TECHNICIAN"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Users - Filter by Role",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/admin/users?role=TECHNICIAN",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "users"
+                  ],
+                  "query": [
+                    {
+                      "key": "role",
+                      "value": "TECHNICIAN"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "715"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"2cb-5Q8CMnKwT+S1dbKi3d6RwlFwgyk\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:54:08 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Users retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"1e393414-2111-4302-b7d3-ef57c052c62f\",\n            \"name\": \"Tech2\",\n            \"email\": \"tech2@test.com\",\n            \"role\": \"TECHNICIAN\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-30T14:08:33.041Z\"\n        },\n        {\n            \"id\": \"fa24e409-53f4-4c68-9260-32ecd1f72e34\",\n            \"name\": \"Tech\",\n            \"email\": \"tech1@test.com\",\n            \"role\": \"TECHNICIAN\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-30T07:01:18.778Z\"\n        },\n        {\n            \"id\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n            \"name\": \"Ab2\",\n            \"email\": \"ab2@example.com\",\n            \"role\": \"TECHNICIAN\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-27T18:13:02.148Z\"\n        },\n        {\n            \"id\": \"edd49567-5f7f-45aa-81b1-2328e78f4079\",\n            \"name\": \"Ar1\",\n            \"email\": \"ar1@example.com\",\n            \"role\": \"TECHNICIAN\",\n            \"status\": \"ACTIVE\",\n            \"createdAt\": \"2026-07-27T18:04:46.866Z\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update User Status - Ban",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"BANNED\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/admin/users/{{user_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "users",
+                "{{user_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update User Status - Unban",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"ACTIVE\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/admin/users/{{user_id}}",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "users",
+                "{{user_id}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Bookings",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/admin/bookings",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "bookings"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Bookings",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/admin/bookings",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "bookings"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "4484"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1184-IZrP1aeDdna+kn5aa5j9VuMmYDY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:54:24 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Bookings retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"4262db8a-7449-4000-a224-e70124b46c19\",\n            \"customerId\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n            \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n            \"scheduledAt\": \"2026-09-15T10:00:00.000Z\",\n            \"status\": \"ACCEPTED\",\n            \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\",\n            \"createdAt\": \"2026-07-30T14:22:51.291Z\",\n            \"updatedAt\": \"2026-07-30T14:42:45.823Z\",\n            \"service\": {\n                \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n                \"title\": \"AC Repair & Servicing\",\n                \"description\": \"Full AC checkup and gas refill\",\n                \"price\": 100,\n                \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n                \"updatedAt\": \"2026-07-30T14:18:46.155Z\"\n            },\n            \"customer\": {\n                \"name\": \"Cus2\",\n                \"email\": \"cus2@test.com\"\n            },\n            \"technician\": {\n                \"id\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"userId\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n                \"bio\": \"Experienced electrician\",\n                \"experience\": 5,\n                \"skills\": [\n                    \"wiring\",\n                    \"installation\"\n                ],\n                \"hourlyRate\": 25,\n                \"location\": \"Dhaka\",\n                \"avgRating\": 5,\n                \"createdAt\": \"2026-07-27T18:13:02.318Z\",\n                \"updatedAt\": \"2026-07-30T14:16:09.760Z\",\n                \"user\": {\n                    \"name\": \"Ab2\"\n                }\n            },\n            \"payment\": {\n                \"id\": \"f1ebb660-966a-4de2-a9f9-ebf97fca8dd2\",\n                \"bookingId\": \"4262db8a-7449-4000-a224-e70124b46c19\",\n                \"userId\": \"c917746d-e7e8-4f60-922e-bacb1c7bb880\",\n                \"amount\": 100,\n                \"provider\": \"STRIPE\",\n                \"transactionId\": \"cs_test_a1b3bVTZiQOyoA46j3p9B5ElnPb8s2XEZPET0l99XhF0wzms5wcZw6HG7s\",\n                \"status\": \"PENDING\",\n                \"paidAt\": null,\n                \"createdAt\": \"2026-07-30T14:46:18.441Z\"\n            }\n        },\n        {\n            \"id\": \"e089127f-507f-4de3-b6f4-06d7955d379d\",\n            \"customerId\": \"b76f97cf-ae76-44ff-9cbb-f7359bb01988\",\n            \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n            \"scheduledAt\": \"2026-09-15T10:00:00.000Z\",\n            \"status\": \"COMPLETED\",\n            \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\",\n            \"createdAt\": \"2026-07-30T07:34:34.474Z\",\n            \"updatedAt\": \"2026-07-30T14:49:41.010Z\",\n            \"service\": {\n                \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n                \"title\": \"AC Repair & Servicing\",\n                \"description\": \"Full AC checkup and gas refill\",\n                \"price\": 100,\n                \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n                \"updatedAt\": \"2026-07-30T14:18:46.155Z\"\n            },\n            \"customer\": {\n                \"name\": \"Cus\",\n                \"email\": \"cus1@test.com\"\n            },\n            \"technician\": {\n                \"id\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"userId\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n                \"bio\": \"Experienced electrician\",\n                \"experience\": 5,\n                \"skills\": [\n                    \"wiring\",\n                    \"installation\"\n                ],\n                \"hourlyRate\": 25,\n                \"location\": \"Dhaka\",\n                \"avgRating\": 5,\n                \"createdAt\": \"2026-07-27T18:13:02.318Z\",\n                \"updatedAt\": \"2026-07-30T14:16:09.760Z\",\n                \"user\": {\n                    \"name\": \"Ab2\"\n                }\n            },\n            \"payment\": {\n                \"id\": \"44b971ff-b20a-4684-bb7c-9e35d2bc9122\",\n                \"bookingId\": \"e089127f-507f-4de3-b6f4-06d7955d379d\",\n                \"userId\": \"b76f97cf-ae76-44ff-9cbb-f7359bb01988\",\n                \"amount\": 100,\n                \"provider\": \"STRIPE\",\n                \"transactionId\": \"cs_test_a1h6lTrykYlSwifsTcS2ioJoyqmREAUhILfskwMj7S6YhCJoxNonwMQQ75\",\n                \"status\": \"COMPLETED\",\n                \"paidAt\": \"2026-07-30T07:49:16.220Z\",\n                \"createdAt\": \"2026-07-30T07:46:40.689Z\"\n            }\n        },\n        {\n            \"id\": \"3bc626ae-d4d5-47b3-a42f-25494ba5950f\",\n            \"customerId\": \"efea610a-1b3b-4fab-9125-00048623cd00\",\n            \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n            \"serviceId\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n            \"scheduledAt\": \"2026-08-15T10:00:00.000Z\",\n            \"status\": \"COMPLETED\",\n            \"address\": \"House 12, Road 5, Dhanmondi, Dhaka\",\n            \"createdAt\": \"2026-07-28T15:41:36.257Z\",\n            \"updatedAt\": \"2026-07-29T18:23:26.093Z\",\n            \"service\": {\n                \"id\": \"a5ee8dc7-7ab6-4af0-8302-6862ae1aea1c\",\n                \"title\": \"AC Repair & Servicing\",\n                \"description\": \"Full AC checkup and gas refill\",\n                \"price\": 100,\n                \"categoryId\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n                \"technicianId\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"createdAt\": \"2026-07-28T08:45:16.804Z\",\n                \"updatedAt\": \"2026-07-30T14:18:46.155Z\"\n            },\n            \"customer\": {\n                \"name\": \"Arnob\",\n                \"email\": \"arnob@example.com\"\n            },\n            \"technician\": {\n                \"id\": \"aa33a91f-878f-4213-90a2-f5806fdb0ded\",\n                \"userId\": \"82064922-7b10-4a4b-ac8b-758b681af538\",\n                \"bio\": \"Experienced electrician\",\n                \"experience\": 5,\n                \"skills\": [\n                    \"wiring\",\n                    \"installation\"\n                ],\n                \"hourlyRate\": 25,\n                \"location\": \"Dhaka\",\n                \"avgRating\": 5,\n                \"createdAt\": \"2026-07-27T18:13:02.318Z\",\n                \"updatedAt\": \"2026-07-30T14:16:09.760Z\",\n                \"user\": {\n                    \"name\": \"Ab2\"\n                }\n            },\n            \"payment\": {\n                \"id\": \"b7e360ba-c38e-4b13-9176-a59006aa049b\",\n                \"bookingId\": \"3bc626ae-d4d5-47b3-a42f-25494ba5950f\",\n                \"userId\": \"efea610a-1b3b-4fab-9125-00048623cd00\",\n                \"amount\": 50,\n                \"provider\": \"STRIPE\",\n                \"transactionId\": \"cs_test_a188TYsWRQhdft9ck3jA2exhWXFPrFdgcHOXwDH9Ik3gmOtCTePg3hY8El\",\n                \"status\": \"COMPLETED\",\n                \"paidAt\": \"2026-07-29T07:52:50.162Z\",\n                \"createdAt\": \"2026-07-29T07:49:53.462Z\"\n            }\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get All Categories (Admin)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/admin/categories",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "categories"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Categories (Admin)",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{base_url}}/api/admin/categories",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "categories"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "680"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"2a8-8DVd3KGrrxRwLyq9gIJ655zbvYI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:54:35 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Categories retrieved successfully\",\n    \"data\": [\n        {\n            \"id\": \"703df282-1563-4c4d-bf17-f55cc19d8f7c\",\n            \"name\": \"Carpentry\",\n            \"description\": \"Furniture repair and woodwork\",\n            \"createdAt\": \"2026-07-27T16:45:16.053Z\"\n        },\n        {\n            \"id\": \"0fa27fc1-b729-4b9d-9463-ccb7a5909fd4\",\n            \"name\": \"Painting\",\n            \"description\": \"Interior and exterior painting\",\n            \"createdAt\": \"2026-07-27T16:38:49.886Z\"\n        },\n        {\n            \"id\": \"dd86456c-c001-42ef-a705-1d28455a99be\",\n            \"name\": \"Cleaning\",\n            \"description\": \"Home and office cleaning services\",\n            \"createdAt\": \"2026-07-27T16:38:49.782Z\"\n        },\n        {\n            \"id\": \"44c28ca5-ef16-486e-9b2b-a547fe68a55c\",\n            \"name\": \"Electrical\",\n            \"description\": \"Wiring, switches, appliance repair\",\n            \"createdAt\": \"2026-07-27T16:38:49.677Z\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Category (Admin)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Gardening\",\n  \"description\": \"Lawn care and landscaping\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/admin/categories",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "admin",
+                "categories"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Category (Admin)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Gardening\",\n  \"description\": \"Lawn care and landscaping\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/admin/categories",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "admin",
+                    "categories"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Access-Control-Allow-Credentials",
+                  "value": "true"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "211"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"d3-UOyztR5ikKor8fco4joRTwE1a5E\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 30 Jul 2026 14:54:49 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"success\": true,\n    \"message\": \"Category created successfully\",\n    \"data\": {\n        \"id\": \"2425d09d-4760-42c0-b3a8-e5f7afd64622\",\n        \"name\": \"Gardening\",\n        \"description\": \"Lawn care and landscaping\",\n        \"createdAt\": \"2026-07-30T14:54:49.152Z\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Health Check",
+      "item": [
+        {
+          "name": "API Root",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000"
+    },
+    {
+      "key": "customer_token",
+      "value": ""
+    },
+    {
+      "key": "technician_token",
+      "value": ""
+    },
+    {
+      "key": "admin_token",
+      "value": ""
+    },
+    {
+      "key": "category_id",
+      "value": ""
+    },
+    {
+      "key": "service_id",
+      "value": ""
+    },
+    {
+      "key": "technician_id",
+      "value": ""
+    },
+    {
+      "key": "booking_id",
+      "value": ""
+    },
+    {
+      "key": "payment_id",
+      "value": ""
+    },
+    {
+      "key": "user_id",
+      "value": ""
+    }
+  ]
+}
